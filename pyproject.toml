@@ -1,0 +1,20 @@
+[build-system]
+requires = ["flit_core >=3.11,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "rst-table-span"
+authors = [{name = "Rasmus Bondesson", email = "raek@raek.se"}]
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.rst"
+dynamic = ["version", "description"]
+dependencies = [
+    "docutils",
+]
+
+[project.urls]
+Home = "https://github.com/raek/rst-table-span/"
+
+[project.scripts]
+rst-table-span-docutils = "rst_table_span:main"

@@ -1,0 +1,11 @@
+generate: venv
+	mkdir -p docutils
+	../venv/bin/rst-table-span-docutils demo.rst --writer html5  --output docutils/demo.html --traceback
+	../venv/bin/rst-table-span-docutils demo.rst --writer pseudoxml --output docutils/demo.pseudoxml.txt --traceback
+	../venv/bin/sphinx-build . sphinx/ -b html
+	../venv/bin/sphinx-build . sphinx/ -b pseudoxml
+
+venv:
+	python3 -m venv ../venv
+	../venv/bin/pip install wheel
+	../venv/bin/pip install -r requirements.txt

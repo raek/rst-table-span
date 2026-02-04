@@ -1,0 +1,5 @@
+/dist
+/venv
+/example/docutils
+/example/sphinx
+__pycache__
