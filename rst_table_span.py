@@ -17,7 +17,7 @@ def col_span_role(role, rawtext, text, lineno, inliner, options=None, content=No
 
 def row_span_role(role, rawtext, text, lineno, inliner, options=None, content=None):
     if not text.isnumeric() or int(text) < 1:
-        return None, [inliner.reporter.error("colspan must be a positive integer", line=lineno)]
+        return None, [inliner.reporter.error("rowspan must be a positive integer", line=lineno)]
     return make_pending_nodes(inliner, 1, int(text))
 
 
