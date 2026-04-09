@@ -1,6 +1,6 @@
 """Support for colspan and rowspan in RST tables for docutils and Sphinx"""
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 import re
